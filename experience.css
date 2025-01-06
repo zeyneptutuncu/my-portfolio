@@ -1,0 +1,187 @@
+#experience {
+  color: #eff1e4;
+  padding: 50px 250px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#experience h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #64ffda;
+  margin-bottom: 30px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.experience-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+.experience-table td {
+  padding: 20px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.experience-table th {
+  background-color: #1e3d44;
+  color: #64ffda;
+  text-transform: uppercase;
+}
+
+.experience-item {
+  background-color: #1e3d44;
+  border: 1px solid #2e7a81;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.role-company-duration {
+  display: flex;
+  flex-direction: column;
+  width: 35%; 
+}
+
+.role h3 {
+  font-size: 24px;
+  color: #64ffda;
+  
+}
+
+.company p {
+  font-size: 18px;
+  color: #ff6f61;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.duration p {
+  font-size: 16px;
+  color: #ff6f61;
+  white-space: nowrap;
+}
+
+.description {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #eff1e4;
+  width: 65%;
+  justify-content: center;
+}
+
+.description li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.description li::before {
+  content: none; 
+}
+
+@media (max-width: 1024px) {
+  #experience {
+      padding: 40px 20px;
+  }
+
+  .experience-table {
+      font-size: 16px;
+  }
+
+  .experience-item {
+      margin-bottom: 20px;
+  }
+
+  .role-company-duration {
+      width: 100%;
+  }
+
+  .description {
+      width: 100%;
+  }
+
+  .role, .company, .duration, .description {
+      text-align: left;
+  }
+}
+
+
+@media (max-width: 768px) {
+  #experience {
+      padding: 30px 15px;
+  }
+
+  .experience-item {
+      padding: 15px;
+  }
+
+  .role-company-duration {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .description {
+      width: 100%;
+      padding-left: 10px;
+  }
+
+  .experience-table {
+      font-size: 14px;
+  }
+
+  .experience-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .role-company-duration, .description {
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #experience {
+      padding: 20px 10px;
+  }
+
+  .experience-item {
+      padding: 10px;
+  }
+
+  .role-company-duration {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .description {
+      width: 100%;
+      padding-left: 5px;
+  }
+
+  .role h3 {
+      font-size: 22px;
+  }
+
+  .company p {
+      font-size: 16px;
+  }
+
+  .duration p {
+      font-size: 14px;
+  }
+
+  .description li {
+      font-size: 14px;
+  }
+}

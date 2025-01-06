@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", monospace;
+  background: linear-gradient(to bottom, #0a292f, #195e6c, #13869a, #0a292f);
+  color: #eff1e4;
+  animation: fadeIn 2s ease-in;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 1px rgba(227, 228, 237, 0.37);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.navbar .logo img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 14px;
+  color: #eff1e4;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: #64ffda;
+}
+
+.resume-btn {
+  background-color: #ff6f61;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+}
+
+.resume-btn:hover {
+  background-color: #ff4f3a;
+}
+
+.hero-section {
+  padding: 70px 150px;
+  text-align: left;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.hero-text h1 {
+  font-size: 14px;
+  color: #64ffda;
+}
+
+.hero-text h2 {
+  font-size: 70px;
+  color: #ff6f61;
+}
+
+.hero-text h3 {
+  font-size: 50px;
+  color: #ff6f61;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links .social-icon {
+  margin-top: 15px;
+  width: 40px;
+  height: 40px;
+  filter: invert(57%) sepia(61%) saturate(1704%) hue-rotate(141deg)
+    brightness(100%) contrast(103%);
+  border: 2px solid transparent;
+}
+
+.social-links a:hover .social-icon,
+.social-links .social-icon {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%)
+    contrast(90%);
+}
+
+.social-links a {
+  color: #eff1e4;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  filter: drop-shadow(0 0 0.75rem #ff6f61);
+  animation: grow 0.3s ease-in-out forwards;
+}
+
+footer {
+  color: #eff1e4;
+  padding: 20px 50px;
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+footer p {
+  font-size: 14px;
+  color: #eff1e4;
+  margin: 0;
+}
+
+footer a {
+  color: #64ffda;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ff6f61;
+  text-decoration: underline;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 14px;
+  color: #eff1e4;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: #64ffda;
+  animation: scaleUp 0.3s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    background-color: #0b535f;
+    left: 0;
+    padding: 20px;
+    z-index: 1;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  #menu-toggle:checked + .hamburger-menu + .nav-links {
+    display: flex;
+  }
+  .hero-section {
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+    color: #64ffda;
+    margin: 10px 0;
+  }
+
+  .hero-text h2 {
+    font-size: 36px;
+    color: #ff6f61;
+    margin: 10px 0;
+  }
+
+  .hero-text h3 {
+    font-size: 22px;
+    color: #ff6f61;
+    margin: 10px 0;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .social-links .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}

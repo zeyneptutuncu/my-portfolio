@@ -1,0 +1,146 @@
+#volunteering {
+  padding: 50px 250px;
+  color: #eff1e4;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#volunteering h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #64ffda;
+  margin-bottom: 20px;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.timeline-content {
+  padding: 20px;
+  background: #1e3d44;
+  box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+  border-radius: 5px;
+  color: white;
+  padding: 1.75rem;
+  transition: 0.4s ease;
+  overflow-wrap: break-word !important;
+  margin: 1rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+
+.timeline-component {
+  margin: 0px 20px 20px 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+.timeline-empty {
+  flex-grow: 1;
+}
+
+.timeline-middle {
+  position: relative;
+  background-image: linear-gradient(45deg, #85cbdf, #83d7df, #ff6f61);
+  width: 3px;
+  height: 100%;
+  display: inline-block;
+}
+
+.timeline-circle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-image: linear-gradient(45deg, #85cbdf, #83d7df, #ff6f61);
+  transform: translateX(-50%);
+}
+
+.timeline-content h3 {
+  color: #ff6f61;
+}
+
+.timeline-content h4 {
+  color: #64ffda;
+}
+
+.timeline-content:hover {
+  transform: scale(1.05);
+  background-color: #1a343a;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, #85cbdf, #83d7df, #ff6f61);
+    width: 3px;
+    height: 100%;
+  }
+
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #85cbdf, #83d7df, #ff6f61);
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .timeline {
+    display: block;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .timeline-middle {
+    display: none;
+  }
+
+  .timeline-circle {
+    left: 0;
+    margin-left: 20px;
+  }
+
+  .timeline-content {
+    margin: 20px 0;
+  }
+
+  #volunteering {
+    padding: 50px 20px;
+  }
+
+  #volunteering h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
